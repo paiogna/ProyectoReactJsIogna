@@ -26,3 +26,8 @@
     height: auto;
     padding-left: 30px;
 }
+
+.cartIcon img{
+    width: 20%;
+    height: auto;
+}
