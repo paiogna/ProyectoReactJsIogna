@@ -1,24 +1,31 @@
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    background-color: lightblue;
+    height: 80px;
 }
 
 .links {
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 90%;
+    grid-template-rows: 100%;
     justify-content: space-between;
+    align-content: center;
     justify-items: center;
     align-items: center;
     width: 80%;
     list-style: none;
-    
 }
 
 .links a {
     text-decoration: none;
     color: black;
+    font-size: 18px;
 }
 
 .logo img {
@@ -30,4 +37,15 @@
 .cartIcon img{
     width: 20%;
     height: auto;
+}
+
+.footer {
+    width: 100%;
+    background-color: lightblue;
+    padding-top: 20px;
+}
+
+.card {
+    padding: 20px;
+    background-color: rgb(219, 250, 219);
 }
