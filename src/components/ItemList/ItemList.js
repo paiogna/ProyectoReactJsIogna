@@ -1,18 +1,15 @@
-import {Card} from "react-bootstrap"
-import AddButton from "../AddButton/AddButton"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Item from "../Item/Item"
 
-export default function ItemList () {
+export default function ItemList ({data =[] }) {
     return (
-        <Card style={{ width: '19rem' }} >
-            <Card.Img variant="top" src="img/royalCaninMin.jpeg" />
-            <Card.Body>
-                <Card.Title>Royal Canin Mini Adulto</Card.Title>
-                <Card.Text>
-                Paquete 3 Kg. Precio: $3280.
-                </Card.Text>
-                <AddButton />
-            </Card.Body>
-        </Card>
+        <div className="item-list">
+            {data.map((product, index) =>(
+                <Item key={index} className={product.id} productImage={product.image} productTitle={product.title} productPrice={product.price} productStock={product.stock}/>
+            ))}
+        </div>
     )
 }
+
+
+
+

@@ -1,8 +1,21 @@
-import AddButton from "../AddButton/AddButton";
+import React, { useState , useEffect } from "react";
 import {Container, Row, Col} from "react-bootstrap"
 import ItemList from "../ItemList/ItemList";
+import {products} from "../../data/productos"
 
 export default function ItemListContainer ({greetings1, greetings2, greetings3}) {
+    const [data, setData] = useState ([]);
+
+    useEffect (() => {
+        const getData = new Promise(resolve => {
+            setTimeout(()=>{
+                resolve(products);
+            },3000)
+        });
+
+        getData.then(res => setData(res));
+    },[])
+
     return (
         <Container>
             <Row>
@@ -11,8 +24,10 @@ export default function ItemListContainer ({greetings1, greetings2, greetings3})
                 </Col>
             </Row>
             <Row>
-                <ItemList />
+                <ItemList data={data} />
             </Row>
         </Container> 
     );
 }
+
+

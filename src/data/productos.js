@@ -1,0 +1,58 @@
+export const products = [
+    {
+        id: 1,
+        title: "Royal Canin Mini",
+        stock: 3,
+        price: 3280,
+        image: "img/royalCaninMin.jpeg",
+    },
+    {
+        id: 2,
+        title: "Royal Canin Puppy",
+        stock: 5,
+        price: 2800,
+        image: "img/royalCaninPuppy.jpeg", 
+    },
+    {
+        id: 3,
+        title: "Royal Canin Medium",
+        stock: 8,
+        price: 3100,
+        image: "img/royalCaninMedium.jpg",
+    },
+    {
+        id: 4,
+        title: "Royal Canin Adulto Maxi",
+        stock: 4,
+        price: 2940,
+        image: "img/royalCaninMaxi.jpeg",
+    },
+    {
+        id: 5,
+        title: "Eukanuba Adulto Raza Grande",
+        stock: 15,
+        price: 3430,
+        image: "img/eukanubaAdultBig.jpeg",
+    },
+    {
+        id: 6,
+        title: "Eukanuba Adulto Raza Chica",
+        stock: 9,
+        price: 3560,
+        image: "img/eukanubaAdultoSmall.jpeg",
+    },
+    {
+        id: 7,
+        title: "Eukanuba Cachorros",
+        stock: 20,
+        price: 3220,
+        image: "img/eukanubaPuppy.jpeg",
+    },
+    {
+        id: 8,
+        title: "Eukanuba Seniors",
+        stock: 0,
+        price: 2890,
+        image: "img/eukanubaSenior.jpeg",
+    },
+]

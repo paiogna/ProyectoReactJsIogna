@@ -10,6 +10,7 @@ export default function Footer () {
                     </Col>
                 </Row>
             </Container>
+            
         </footer>
     )
 }
