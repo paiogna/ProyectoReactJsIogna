@@ -1,0 +1,13 @@
+.item-detailContainer {
+    display: flex;
+
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-template-rows: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
