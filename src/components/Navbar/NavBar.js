@@ -1,16 +1,18 @@
 import CartIcon from "../CartIcon/CartIcon"
+import {Link} from "react-router-dom"
 
 export default function NavBar () {
     return (
         <header className="header">
             <div className="logo">
+            <Link to="/" >
                 <img src="img/pet.png" />
+            </Link>
             </div>
             <ul className="links">
-                <li><a href="#">Productos Perros</a></li>
-                <li><a href="#">Productos Gatos</a></li>
-                <li><a href="#">Otras mascotas</a></li>
-                <li><a href="#"><CartIcon /></a></li>
+                <li><Link to="/category/1" >Productos Royal Canin</Link></li>
+                <li><Link to="/category/2" >Productos Eukanuba</Link></li>
+                <li><Link to="/Cart" ><CartIcon /></Link></li>
             </ul>
             
         </header>

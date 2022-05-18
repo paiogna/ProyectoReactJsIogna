@@ -3,24 +3,24 @@ import {Container, Row, Col} from "react-bootstrap"
 import ItemList from "../ItemList/ItemList";
 import {products} from "../../data/productos"
 
-export default function ItemListContainer ({greetings1, greetings2, greetings3}) {
+export default function ItemListContainer ({categoryId}) {
     const [data, setData] = useState ([]);
 
-    useEffect (() => {
-        const getData = new Promise(resolve => {
-            setTimeout(()=>{
-                resolve(products);
-            },3000)
-        });
-
-        getData.then(res => setData(res));
-    },[])
+    React.useEffect(() => {
+        if (categoryId) {
+            setData(products.filter(data => data.categoryId === +categoryId));
+        }
+        else {
+            setData(products);
+        }
+        
+    },[categoryId])
 
     return (
         <Container>
-            <Row>
+            <Row> . 
                 <Col>
-                <h2>Aquí encontrarás productos para {greetings1} , {greetings2} y {greetings3}.</h2> 
+                <h2>Aquí encontrarás productos para perros de Royal Canin y Eukanuba.</h2> 
                 </Col>
             </Row>
             <Row>
@@ -31,3 +31,12 @@ export default function ItemListContainer ({greetings1, greetings2, greetings3})
 }
 
 
+    // useEffect (() => {
+    //     const getData = new Promise(resolve => {
+    //         setTimeout(()=>{
+    //             resolve(products);
+    //         },9000)
+    //     });
+
+    //     getData.then(res => setData(res));
+    // },[])

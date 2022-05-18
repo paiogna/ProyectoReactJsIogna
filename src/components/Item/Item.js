@@ -1,4 +1,5 @@
 import {Card, Button} from "react-bootstrap"
+import {Link, useNavigate} from "react-router-dom"
 import ItemCount from "../ItemCount/ItemCount"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {toast} from "react-toastify"
@@ -16,6 +17,7 @@ export default function Item ({productImage,productTitle,productPrice,productSto
             });
     }
 
+    const navigate = useNavigate()
     return (
         <Card style={{ width: '18rem', height: 'auto' }} className={productId}>
             <Card.Img variant="top" src={productImage} style={{height: '250px', width: 'auto'}}/>
@@ -24,7 +26,9 @@ export default function Item ({productImage,productTitle,productPrice,productSto
                 <Card.Text> 
                     Precio: ${productPrice} / Stock: {productStock} u.
                 </Card.Text>
-                <Button variant="primary">Ver detalle del producto</Button>
+                {/* <Link to={`/product/${productId}`}> */}
+                    <Button variant="primary" onClick={() => navigate(`/product/${productId}`)} >Ver detalle del producto</Button>
+                    {/* </Link> */}
                 <ItemCount initial={1} stock={productStock} onAdd={onAdd}/>
             </Card.Body>
         </Card>

@@ -5,6 +5,7 @@ export const products = [
         stock: 3,
         price: 3280,
         image: "img/royalCaninMin.jpeg",
+        categoryId: 1,
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ export const products = [
         stock: 5,
         price: 2800,
         image: "img/royalCaninPuppy.jpeg", 
+        categoryId: 1,
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ export const products = [
         stock: 8,
         price: 3100,
         image: "img/royalCaninMedium.jpg",
+        categoryId: 1,
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ export const products = [
         stock: 4,
         price: 2940,
         image: "img/royalCaninMaxi.jpeg",
+        categoryId: 1,
     },
     {
         id: 5,
@@ -33,6 +37,7 @@ export const products = [
         stock: 15,
         price: 3430,
         image: "img/eukanubaAdultBig.jpeg",
+        categoryId: 2,
     },
     {
         id: 6,
@@ -40,6 +45,7 @@ export const products = [
         stock: 9,
         price: 3560,
         image: "img/eukanubaAdultoSmall.jpeg",
+        categoryId: 2,
     },
     {
         id: 7,
@@ -47,6 +53,7 @@ export const products = [
         stock: 20,
         price: 3220,
         image: "img/eukanubaPuppy.jpeg",
+        categoryId: 2,
     },
     {
         id: 8,
@@ -54,5 +61,6 @@ export const products = [
         stock: 0,
         price: 2890,
         image: "img/eukanubaSenior.jpeg",
+        categoryId: 2,
     },
 ]
