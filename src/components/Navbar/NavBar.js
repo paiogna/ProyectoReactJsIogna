@@ -6,7 +6,7 @@ export default function NavBar () {
         <header className="header">
             <div className="logo">
             <Link to="/" >
-                <img src="img/pet.png" />
+                <img src="/img/pet.png" />
             </Link>
             </div>
             <ul className="links">

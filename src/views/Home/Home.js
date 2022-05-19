@@ -4,8 +4,14 @@ import Footer from "../../components/Footer/Footer"
 export default function Home () {
     return (
         <div>
-            <h1>Bienvenidos a Cachorritos</h1>
-            <ItemListContainer />
+            <div className="homeContainer" >
+                <h1>Bienvenidos a Nuestra Tienda</h1>
+                <img src="/img/pet.png" />
+                <h2>Aquí encontrarás productos para perros de Royal Canin y Eukanuba.</h2> 
+            </div>
+            <div>
+                <ItemListContainer />
+            </div>
             <Footer />
         </div>
     )

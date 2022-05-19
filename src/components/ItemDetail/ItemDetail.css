@@ -5,9 +5,17 @@
 
 .detail {
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 50% 40%;
     grid-template-rows: 100%;
+    grid-template-areas: "foto descripcion";
     align-items: center;
-    align-content: center;
-    justify-content: center;
+    align-content: space-between;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+.imgDetail {
+    grid-area: foto;
+    width: 100%;
+    height: auto;
 }

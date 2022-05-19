@@ -18,11 +18,6 @@ export default function ItemListContainer ({categoryId}) {
 
     return (
         <Container>
-            <Row> . 
-                <Col>
-                <h2>Aquí encontrarás productos para perros de Royal Canin y Eukanuba.</h2> 
-                </Col>
-            </Row>
             <Row>
                 <ItemList data={data} />
             </Row>

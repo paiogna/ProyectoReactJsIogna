@@ -4,7 +4,7 @@ export default function ItemList ({data =[] }) {
     return (
         <div className="item-list">
             {data.map((product, index) =>(
-                <Item key={index} className={product.id} productImage={product.image} productTitle={product.title} productPrice={product.price} productStock={product.stock}/>
+                <Item key={index} productId={product.id} productImage={product.image} productTitle={product.title} productPrice={product.price} productStock={product.stock}/>
             ))}
         </div>
     )
