@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import {toast} from "react-toastify"
+import {Link} from "react-router-dom"
 
 export const ItemDetail =({data}) => {
 
+    const [goToCart, setGoToCart] = useState (false);
+
     const onAdd = (quantity) => {
+        setGoToCart (true);
         toast.success(`Se agregaron ${quantity} unidades al carrito`, {
             position: "top-right",
             autoClose: 5000,
@@ -25,7 +29,12 @@ export const ItemDetail =({data}) => {
                     <h1>{data.title}</h1>
                     <p>{data.descripcion} </p>
                     <h2>${data.price}</h2>
-                    <ItemCount initial={1} stock={data.stock} onAdd={onAdd}/>
+                    {
+                        goToCart 
+                            ? <Link to="/cart">Terminar la compra</Link>
+                            :<ItemCount initial={1} stock={data.stock} onAdd={onAdd}/>
+                    }
+                    
                 </div>
             </div>
         </div>
