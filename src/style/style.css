@@ -83,3 +83,15 @@
 .homeContainer img {
     width: 20%;
 }
+
+.badge {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: red;
+}

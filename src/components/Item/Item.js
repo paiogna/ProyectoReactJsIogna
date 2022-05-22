@@ -26,10 +26,8 @@ export default function Item ({productImage,productTitle,productPrice,productSto
                 <Card.Text> 
                     Precio: ${productPrice} / Stock: {productStock} u.
                 </Card.Text>
-                {/* <Link to={`/product/${productId}`}> */}
                     <Button variant="primary" onClick={() => navigate(`/product/${productId}`)} >Ver detalle del producto</Button>
-                    {/* </Link> */}
-                <ItemCount initial={1} stock={productStock} onAdd={onAdd}/>
+                {/* <ItemCount initial={1} stock={productStock} onAdd={onAdd}/> */}
             </Card.Body>
         </Card>
     )

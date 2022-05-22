@@ -8,6 +8,7 @@ import ProductDetail from "./views/ProductDetail/ProductDetail"
 import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Cart from "./views/Cart/Cart"
+import {CartProvider} from "./components/Context/CartContext"
 
 function App() {
   
@@ -15,13 +16,15 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar />
-        <Routes>
+      <CartProvider>
+      <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/products" element={<Products />} />
           <Route exact path="/product/:productId" element={<ProductDetail />} />
           <Route exact path="/category/:categoryId" element={<Category />} />
           <Route exact path="/Cart" element={<Cart/>} />
         </Routes>
+      </CartProvider>
     </BrowserRouter>
     
   );
