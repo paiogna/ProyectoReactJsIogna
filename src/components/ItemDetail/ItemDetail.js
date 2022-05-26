@@ -3,9 +3,11 @@ import "./ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import {toast} from "react-toastify"
 import {Link} from "react-router-dom"
+import { CartContext } from "../../Context/CartContext";
+
 
 export const ItemDetail =({data}) => {
-
+    const {addToCart} = React.useContext (CartContext)
     const [goToCart, setGoToCart] = useState (false);
 
     const onAdd = (quantity) => {
@@ -32,7 +34,7 @@ export const ItemDetail =({data}) => {
                     {
                         goToCart 
                             ? <Link to="/cart">Terminar la compra</Link>
-                            :<ItemCount initial={1} stock={data.stock} onAdd={onAdd}/>
+                            :<ItemCount initial={1} stock={data.stock} onAdd={() => addToCart(data)}/>
                     }
                     
                 </div>

@@ -8,7 +8,7 @@ import ProductDetail from "./views/ProductDetail/ProductDetail"
 import Products from "./views/Products/Products"
 import Category from "./views/Category/Category"
 import Cart from "./views/Cart/Cart"
-import {CartProvider} from "./components/Context/CartContext"
+import {CartProvider} from "./Context/CartContext"
 
 function App() {
   
