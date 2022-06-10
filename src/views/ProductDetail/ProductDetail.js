@@ -8,7 +8,7 @@ export default function ProductDetail () {
     return (
         <div>
             <h1>Detalle del Producto</h1>
-            <ItemDetailContainer productId={+productId}/>
+            <ItemDetailContainer productId={productId}/>
             <Footer />
         </div>
     )
