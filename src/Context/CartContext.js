@@ -4,24 +4,23 @@ const CartContext = React.createContext();
 const {Provider} = CartContext
 
 const CartProvider = ({children}) => {
-    const [cart, setCart] = React.useState([])
+    const [cart, setCart] = React.useState((localStorage.getItem('cart') && JSON.parse(localStorage.getItem('cart'))) || []);
 
+    console.log(cart)
     // addToCart 
-    const addToCart = (data) => {
+    const addToCart = (data,count) => {
         if (isInCart(data.id)) {
             const newCart = cart.map(cartItem => {
                 if (cartItem.id === data.id) {
-                    cartItem.quantity ++
+                    cartItem.quantity++
             }
             return cartItem
-            } 
-            )
+            })
             setCart(newCart)
         }
             else {
-                setCart ([...cart, {...data, quantity: 1}])
+                setCart([...cart, {...data, quantity: +count}])
         }
-        console.log(cart)
     }
 
     // removeFromCart

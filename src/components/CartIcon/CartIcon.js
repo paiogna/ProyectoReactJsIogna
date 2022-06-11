@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {Link} from "react-router-dom"
 import { CartContext } from "../../Context/CartContext";
 
@@ -7,12 +7,12 @@ export default function CartIcon () {
 
     return (
         <div className="cartIcon">
-            {/* <Link to="/Cart"> */}
+            <Link to="/Cart">
             <img src="/img/CartIcon.png" alt="imgCart" />
             {/* <span className="badge">
                 {cart.length}
             </span> */}
-            {/* </Link> */}
+            </Link>
         </div>
     )
 }

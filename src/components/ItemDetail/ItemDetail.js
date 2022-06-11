@@ -7,8 +7,9 @@ import { CartContext } from "../../Context/CartContext";
 
 
 export const ItemDetail =({data}) => {
-    const {addToCart} = React.useContext (CartContext)
+    const {addToCart, isInCart} = React.useContext (CartContext)
     const [goToCart, setGoToCart] = useState (false);
+    const [count, setCount] = useState (1);
 
     const onAdd = (quantity) => {
         setGoToCart (true);
@@ -31,12 +32,32 @@ export const ItemDetail =({data}) => {
                     <h1>{data.title}</h1>
                     <p>{data.descripcion} </p>
                     <h2>${data.price}</h2>
-                    {
-                        goToCart 
-                            ? <Link to="/cart">Terminar la compra</Link>
-                            :<ItemCount initial={1} stock={data.stock} onAdd={() => addToCart(data)}/>
+                    {!isInCart(data.id) ? (
+                            <ItemCount
+                            initial={1}
+                            onAdd={() => addToCart(data, count)}
+                            count={count}
+                            setCount={setCount}
+                            stock={data.stock}
+                            />
+                            ) : (
+                                <button>Ir al carrito</button>
+                            )
                     }
-                    
+                    {/* {!isInCart (data.id) ? (
+                        <ItemCount initial={1} count={count}
+                        setCount={setCount} stock={data.stock} onAdd={() => addToCart(data, count)} />
+                        ) : (
+                        <Link to="/cart">Terminar la compra</Link>  
+                    )} */}
+                    {/* // {
+                    //     goToCart 
+                    //         ? <Link to="/cart">Terminar la compra</Link>
+                    //         :<ItemCount initial={1} stock={data.stock} count={count}
+                    //         setCount={setCount} onAdd={() => addToCart(data, count)} />
+                    // }
+                     */}
+
                 </div>
             </div>
         </div>
