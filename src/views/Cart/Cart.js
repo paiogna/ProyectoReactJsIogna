@@ -1,10 +1,10 @@
 import Footer from "../../components/Footer/Footer"
+import Carrito from "../../components/Carrito/Carrito"
 
 export default function Cart () {
     return (
         <div>
-            <h1>Cart</h1>
-        
+            <Carrito />
             <Footer />
         </div>
     )

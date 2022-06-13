@@ -15,8 +15,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
       <CartProvider>
+      <NavBar />
       <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/products" element={<Products />} />

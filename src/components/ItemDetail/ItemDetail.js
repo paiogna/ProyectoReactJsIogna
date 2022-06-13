@@ -40,24 +40,10 @@ export const ItemDetail =({data}) => {
                             setCount={setCount}
                             stock={data.stock}
                             />
-                            ) : (
-                                <button>Ir al carrito</button>
-                            )
-                    }
-                    {/* {!isInCart (data.id) ? (
-                        <ItemCount initial={1} count={count}
-                        setCount={setCount} stock={data.stock} onAdd={() => addToCart(data, count)} />
                         ) : (
-                        <Link to="/cart">Terminar la compra</Link>  
-                    )} */}
-                    {/* // {
-                    //     goToCart 
-                    //         ? <Link to="/cart">Terminar la compra</Link>
-                    //         :<ItemCount initial={1} stock={data.stock} count={count}
-                    //         setCount={setCount} onAdd={() => addToCart(data, count)} />
-                    // }
-                     */}
-
+                            <Link to="/cart">Terminar la compra</Link>  
+                        )
+                    }
                 </div>
             </div>
         </div>
