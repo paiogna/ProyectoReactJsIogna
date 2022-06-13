@@ -41,7 +41,9 @@ export function Carrito() {
                 </div>
                 <div className="cart-total">
                     <h3>Total: ${total}</h3>
+                    <Link to="/Checkout">
                     <button>Comprar</button>
+                    </Link>
                     <button onClick={() => deleteAll()}>Remove all</button>
                 </div>
                 </div>

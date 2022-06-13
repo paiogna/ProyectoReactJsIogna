@@ -7,15 +7,17 @@ export default function CartIcon () {
 
     return (
         <div className="cartIcon">
+            { cart.length > 0 ? (
             <Link to="/Cart">
             <img src="/img/CartIcon.png" alt="imgCart" />
             <span className="badge">
                 {cart.length}
             </span>
             </Link>
+            ) : (
+            <Link to="/Cart"></Link>
+            )}
         </div>
-
-        
     )
 }
 
