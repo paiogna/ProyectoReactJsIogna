@@ -6,7 +6,7 @@ import Footer from "../../components/Footer/Footer"
 export default function ProductDetail () {
     const {productId} = useParams ()
     return (
-        <div>
+        <div className="font">
             <h1>Detalle del Producto</h1>
             <ItemDetailContainer productId={productId}/>
             <Footer />

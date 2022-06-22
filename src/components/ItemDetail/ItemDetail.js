@@ -25,7 +25,7 @@ export const ItemDetail =({data}) => {
     }
 
     return (
-        <div className="item-detailContainer">
+        <div className="item-detailContainer font">
             <div className="detail">
                 <img className="imgDetail" src={data.image} alt=""/>
                 <div className="content">

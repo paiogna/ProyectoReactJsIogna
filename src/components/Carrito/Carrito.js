@@ -4,7 +4,6 @@ import {Link} from "react-router-dom"
 
 
 export function Carrito() {
-    const [cartOpen, setCartOpen] = useState(false);
     const [productsLenght, setProductsLenght] = useState(0);
     const { cart, addToCart, removeFromCart, deleteAll, isInCart } = useContext(CartContext);
 
@@ -20,7 +19,7 @@ export function Carrito() {
 
     return (
         <>
-        <div className="cart">
+        <div className="cart font">
             { cart.length > 0 ? (
                 <div className="cart-container">
                 <div className="cart-items">

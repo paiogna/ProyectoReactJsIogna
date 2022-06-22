@@ -1,5 +1,5 @@
 import React from "react"
-
+import {toast} from "react-toastify"
 import { doc,getDoc,updateDoc,addDoc,runTransaction,collection,getFirestore,} from "firebase/firestore";
 import { CartContext } from "../../Context/CartContext";
 
@@ -10,8 +10,6 @@ function Form() {
     const [orderId, setOrderId] = React.useState()
     console.log(orderId)
 
-
-    // Guardamos los datos del formulario en un estado cada vez que se modifica un campo
     const handleChange = (event) => {
     const { name, value } = event.target;
     setData({ ...data, [name]: value });
@@ -20,6 +18,7 @@ function Form() {
     const total = cart.reduce(
         (prev, curr) => prev + curr.price * curr.quantity, 0);
         console.log(total);
+        console.log(cart)
 
   // Accion que se ejecuta al hacer click en el boton para enviar el formulario
     const handleSubmit = async (event) => {
@@ -35,10 +34,23 @@ function Form() {
     await addDoc(ordersCollection, order).then(({id}) => {
         setOrderId(id)
         updateProducts()
+        toast.info(`¡Compra generada con éxito!. 
+        Tu ID es:  ${id} 
+        Te enviamos toda la información de la compra a tu email.`, {
+            position: "top-center",
+            icon: false,
+            autoClose: false,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
         })
+
     }
 
-  // Batch update de productos una vez generada la orden
+
     const updateProducts = async () => {
     const db = getFirestore ()
     cart.forEach( async (item) => {
@@ -53,7 +65,7 @@ function Form() {
     });
     })
     }
-  // Updateo 1 producto solo 
+
     const handleUpdateOneProduct = () => {
     const db = getFirestore();
     const productDoc = doc(db, "productos", "sXARY8G62PxwaRxzNeFX");
@@ -62,9 +74,11 @@ function Form() {
 
 
 return (
-    <div className="App">
-        <form onSubmit={handleSubmit}>
+    <div className="App font">
+        <form onSubmit={handleSubmit} className="form">
             <h1>Checkout</h1>
+            <p>¡Estas a un paso de completar tu compra! </p>
+            <p>Por favor ingresa los datos solicitados y clickea Finalizar compra para generar el ID de tu compra</p>
             <input
             type="text"
             name="name"

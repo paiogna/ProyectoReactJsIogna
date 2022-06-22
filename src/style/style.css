@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+.font {
+    font-family: Quicksand;
+    font-weight: 400;
+}
 
 .header {
     display: flex;
@@ -21,13 +27,21 @@
     width: 80%;
     height: 100%;
     list-style: none;
+    
 }
 
 .links a {
     text-decoration: none;
     color: black;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 600;
+    
+}
+
+.links1 {
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .logo img {
@@ -37,7 +51,7 @@
 }
 
 .cartIcon img{
-    width: 30%;
+    width: 30px;
     height: auto;
 }
 
@@ -173,4 +187,37 @@
     height: 100%;
     list-style: none;
     background-color: rgb(233, 229, 195);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+.Toastify__toast-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.Toastify__toast-theme--light {
+    background-color: rgb(233, 229, 195);
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    font-family: Quicksand;
 }

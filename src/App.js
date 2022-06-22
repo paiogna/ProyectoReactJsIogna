@@ -1,7 +1,4 @@
 import NavBar from "./components/Navbar/NavBar";
-// import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-// import Footer from "./components/Footer/Footer"
-// import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import {BrowserRouter, Routes , Route} from "react-router-dom"
 import Home from "./views/Home/Home"
 import ProductDetail from "./views/ProductDetail/ProductDetail"
